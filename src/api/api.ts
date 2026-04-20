@@ -1,4 +1,4 @@
-import type { GH_Error, GH_User } from 'types';
+import type { GH_Error, GH_User } from '../types';
 import { isGitHubUser } from '../utils/types';
 
 const BASE_URL = 'https://api.github.com/users/';
