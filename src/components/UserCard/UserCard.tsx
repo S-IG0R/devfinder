@@ -1,6 +1,6 @@
 import styles from './UserCard.module.scss';
 
-import type { GH_LocalUser } from 'types';
+import type { GH_LocalUser } from '../../types';
 import { type CSSProperties } from 'react';
 
 import Bio, { type IBio } from '../Bio/Bio';

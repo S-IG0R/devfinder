@@ -1,6 +1,6 @@
 import styles from './Stats.module.scss';
 
-import { useEffect, useState, type CSSProperties } from 'react';
+import { type CSSProperties } from 'react';
 import useAnimationOrder from '../../hooks/useAnimationOrder';
 
 import StatsLabel from '../../components/StatsLabel/StatsLabel';

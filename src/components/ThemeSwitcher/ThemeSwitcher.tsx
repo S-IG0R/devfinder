@@ -1,5 +1,5 @@
 import styles from './ThemeSwitcher.module.scss';
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { IoSunny, IoMoon } from 'react-icons/io5';
 import useLocalStorage from '../../hooks/useLocalStorage';
 

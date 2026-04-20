@@ -1,7 +1,7 @@
 import styles from './Resources.module.scss';
 import ResourceItem from '../../components/ResourceItem/ResourceItem';
 import { type CSSProperties } from 'react';
-import type { GH_LocalUser } from 'types';
+import type { GH_LocalUser } from '../../types';
 
 import { FaLink, FaSquareXTwitter, FaCity } from 'react-icons/fa6';
 import { IoLocationSharp } from 'react-icons/io5';

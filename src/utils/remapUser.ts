@@ -1,4 +1,4 @@
-import type { GH_LocalUser, GH_User } from 'types';
+import type { GH_LocalUser, GH_User } from '../types';
 
 export const remapUser = (user: GH_User): GH_LocalUser => {
 

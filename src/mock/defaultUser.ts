@@ -1,4 +1,4 @@
-import type { GH_LocalUser } from 'types';
+import type { GH_LocalUser } from '../types';
 
 export const defaultUser: GH_LocalUser = {
   login: 'S-IG0R',

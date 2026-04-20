@@ -1,6 +1,6 @@
 import styles from './FallbackAvatar.module.scss';
 import { type CSSProperties } from 'react';
-import type { GH_LocalUser } from 'types';
+import type { GH_LocalUser } from '../../types';
 
 interface IFallbackAvatar extends Pick<GH_LocalUser, 'name'> {
   style?: CSSProperties;

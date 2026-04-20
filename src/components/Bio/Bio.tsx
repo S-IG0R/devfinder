@@ -1,6 +1,6 @@
 import styles from './Bio.module.scss';
 import { useEffect, type CSSProperties } from 'react';
-import type { GH_LocalUser } from 'types';
+import type { GH_LocalUser } from '../../types';
 
 import Cursor from '../../components/Cursor/Cursor';
 import useTypeText from '../../hooks/useTypeText';

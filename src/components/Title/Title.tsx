@@ -1,6 +1,6 @@
 import styles from './Title.module.scss';
 import Cursor from '../Cursor/Cursor';
-import type { GH_LocalUser } from 'types';
+import type { GH_LocalUser } from '../../types';
 import { useEffect, type CSSProperties } from 'react';
 import useTypeText from '../../hooks/useTypeText';
 

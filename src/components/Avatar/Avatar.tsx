@@ -2,7 +2,7 @@ import styles from './Avatar.module.scss';
 import { useState } from 'react';
 import FallbackAvatar from '../FallbackAvatar/FallbackAvatar';
 import type { CSSProperties } from 'react';
-import type { GH_LocalUser } from 'types';
+import type { GH_LocalUser } from '../../types';
 
 export interface IAvatar extends Pick<GH_LocalUser, 'avatar' | 'name'>{
   style?: CSSProperties;
