@@ -1,6 +1,6 @@
 {
-  "name": "ts-project_2-devfinder",
-  "homepage": "https://S-IG0R.github.io/devfinder",
+  "name": "devfinder",
+  "homepage": "https://github.com/S-IG0R/devfinder",
   "private": true,
   "version": "0.0.0",
   "type": "module",
