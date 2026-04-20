@@ -1,0 +1,32 @@
+@use '../../mixins/mixins.scss';
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+  --info: var(--gray-200);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  --info: var(--white);
+}
+
+.info {
+  color: var(--info);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+.empty {
+  opacity: 0.75;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--info);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &:hover {
+    text-decoration: underline;
+  }
+}

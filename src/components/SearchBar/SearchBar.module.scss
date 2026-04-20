@@ -1,0 +1,81 @@
+@use '../../mixins/mixins.scss';
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+  --search-bg: var(--white);
+  --search-color: var(--gray-300);
+  --search-placeholder-color: var(--gray-200);
+  --search-shadow: var(--shadow);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  --search-bg: var(--gray-400);
+  --search-color: var(--white);
+  --search-placeholder-color: var(--white);
+  --search-shadow: unset;
+}
+
+
+.form {
+  position: relative;
+  width: 100%;
+  padding: 8px 8px 8px 16px;
+  background-color: var(--search-bg, white);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--search-shadow);
+  border-radius: 15px;
+  @media (min-width: 767px) {
+    padding: 10px 10px 10px 30px;
+  }
+}
+
+.label {
+  flex-shrink: 0;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  & svg {
+    color: var(--main-color);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.textField {
+  padding: 0 10px;
+  flex-grow: 5;
+  height: 60px;
+  max-width: calc(100% - 100px - 20px);
+  border: none;
+  color: var(--search-color);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  background-color: var(--search-bg);
+
+  &Error {
+    outline: 1px solid var(--error-color);
+  }
+
+  &::placeholder {
+    color: var(--search-placeholder-color);
+  }
+  &:focus {
+    outline: none;
+  }
+  @media (min-width: 767px) {
+    margin: 0 5px;
+    font-size: 1.25rem;
+    margin: 0 20px;
+  }
+}
+
+.error {
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  color: var(--error-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 700;
+  transform: translate(-50%);
+}

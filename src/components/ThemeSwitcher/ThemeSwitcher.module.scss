@@ -1,0 +1,43 @@
+@use '../../mixins/mixins.scss';
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+  --switcher-color: var(--gray-100);
+  --switcher-color-hover: var(--gray-300);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  --switcher-color: var(--white);
+  --switcher-color-hover: var(--gray-100);
+}
+
+.switch {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+  height: 25px;
+  // gap: 1rem;
+  cursor: pointer;
+  &:hover {
+    .text {
+      color: var(--switcher-color-hover);
+    }
+    .icon {
+      color: var(--switcher-color-hover);
+    }
+  }
+}
+
+.text {
+  color: var(--switcher-color);
+  font-size: 0.75rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.icon {
+  height: 100%;
+  width: 100%;
+  color: var(--switcher-color);
+}

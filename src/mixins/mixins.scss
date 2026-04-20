@@ -1,0 +1,9 @@
+@mixin selectAttr($element, $attr, $value) {
+  #{$element}[#{$attr}='#{$value}'] {
+    @content;
+  }
+}
+
+@mixin addTransition($property, $delay) {
+  transition: #{$property} #{$delay}ms;
+}

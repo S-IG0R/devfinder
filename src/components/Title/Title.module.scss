@@ -1,0 +1,55 @@
+@use '../../mixins/mixins.scss';
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+  --title: var(--gray-300);
+  --joined: var(--gray-100);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  --title: var(--white);
+  --joined: var(--white);
+}
+
+.container {
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr minmax(180px, auto);
+    grid-auto-flow: column;
+    gap: 2px 10px;
+  }
+}
+
+.name {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--title);
+  @media (min-width: 767px) {
+    font-size: 1.5rem;
+  }
+}
+
+.login {
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--main-color);
+  @media (min-width: 767px) {
+    font-size: 1rem;
+  }
+}
+
+.joinDate {
+  display: block;
+  color: var(--joined);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-top: 6px;
+  min-height: 13px;
+  @media (min-width: 767px) {
+    font-size: 1rem;
+    justify-self: end;
+    width: 100%;
+  }
+}

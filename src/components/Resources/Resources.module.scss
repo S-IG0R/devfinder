@@ -1,0 +1,30 @@
+@use '../../mixins/mixins.scss';
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+  --info: var(--gray-200);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  --info: var(--white);
+}
+
+.icon {
+  fill: var(--info);
+  margin-right: 1rem;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.listInfoItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 64px;
+  @media (min-width: 767px) {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr minmax(240px, auto);
+    grid-auto-flow: column;
+  }
+}

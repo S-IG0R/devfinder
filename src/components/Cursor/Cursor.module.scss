@@ -1,0 +1,21 @@
+@use '../../mixins/mixins.scss';
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+  --cursor: var(--gray-300);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  --cursor: var(--white);
+}
+
+.cursor {
+  animation: blink 900ms infinite;
+  position: absolute;
+  color: var(--cursor);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

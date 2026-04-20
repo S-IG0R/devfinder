@@ -1,0 +1,14 @@
+@use '../../mixins/mixins.scss';
+
+.logo {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--white);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+  .logo {
+    color: var(--gray-300);
+  }
+}

@@ -1,0 +1,24 @@
+@use '../../mixins/mixins.scss';
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+  --bio: var(--gray-300);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  --bio: var(--white);
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 24px;
+  color: var(--bio);
+  @media (max-width: 767px) {
+    font-size: 0.75rem;
+    min-height: 18px;
+  }
+}
+
+.emptyBio {
+  opacity: 0.75;
+}

@@ -1,0 +1,27 @@
+@use '../../mixins/mixins.scss';
+
+@include mixins.selectAttr('body', 'data-theme', 'light') {
+   --stat-bg: var(--gray-50);
+  --stat-color: var(--gray-300);
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  --stat-bg: var(--gray-500);
+  --stat-color: var(--white);
+}
+
+.container {
+  background-color: var(--stat-bg);
+  color: var(--stat-color);
+  padding: 15px 32px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 78px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

@@ -1,0 +1,22 @@
+.notFound {
+  color: var(--error-color);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  font-size: 1.2rem;
+  @media (max-width: 424px) {
+    font-size: 0.9rem;
+  }
+}
+
+.icon {
+  stroke-width: 1.2px;
+  width: 4.2rem;
+  height: 4.2rem;
+  @media (max-width: 424px) {
+    width: 3rem;
+    height: 3rem;
+  }
+}

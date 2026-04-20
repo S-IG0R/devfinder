@@ -1,0 +1,94 @@
+@use './mixins/mixins.scss';
+@import url('./vendor/fonts.css');
+
+:root {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main-color: #0079ff;
+  --main-color-hover: #60abff;
+
+  --white: #fff;
+
+  --gray-50: #f6f8ff;
+  --gray-150: #ffffff66;
+  --gray-100: #697c9a;
+  --gray-200: #4b6a9b;
+  --gray-300: #2b3442;
+  --gray-400: #1e2a47;
+  --gray-500: #141d2f;
+
+  --error-color: #f74646;
+
+  --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+a:has(> img) {
+  display: block;
+}
+
+input::-webkit-search-cancel-button,
+input::-webkit-clear-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body {
+  margin: 0;
+  /* display: flex;
+  place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--gray-50);
+  @include mixins.addTransition(
+    'background-color',
+    200
+  ); // transition: background-color 300ms;
+}
+
+@include mixins.selectAttr('body', 'data-theme', 'dark') {
+  background-color: var(--gray-500);
+}
+
+.preload {
+  transition: none;
+}

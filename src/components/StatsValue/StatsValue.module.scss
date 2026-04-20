@@ -1,0 +1,8 @@
+.value {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-size: 700;
+   @media (max-width: 374px) {
+    font-size: 0.85rem;
+  }
+}
